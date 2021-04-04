@@ -10,7 +10,9 @@ set :application, "deploy_test"
 ## [변수 설정] Rails 프로젝트가 저장된 Github
 set :repo_url, "git@github.com:Yoon-Haeng-Heo/deploy_test.git"
 # [Example] git@github.com:kbs4674/cicd_test2.git
+set :pg_password, ENV["DB_USER_PASSWD"]
 
+set :pg_ask_for_password, true
 ## Github(:repo_url)부터 프로젝트를 가져올 branch
 set :branch, :master
 
@@ -27,7 +29,7 @@ set :deploy_via, :remote_cache
 # Default value for :pty is false
 set :pty, true
 
-## Github에 Push되면 안되는 중요한 파일에 있어선 해당 리스트에 추가하는게 좋음.
+## Github에 Push되면 안되는 중요한 파일에 있어선 해당 리스트에 추가하는게cap production deploy:check 좋음.
 # 해당 리스트에 추가된 파일은 하단에 보이는 namespace :linked_files 부분에도 추가해줘야 합니다.
 set :linked_files, %w{config/application.yml config/database.yml config/master.key}
 

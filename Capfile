@@ -29,6 +29,7 @@ require "capistrano/rbenv"
 require "capistrano/bundler"
 
 ## Capistrano ↔ assets
+require 'capistrano/postgresql'
 ## *rails/assets require가 없으면 배포 후 자동으로 assets precompile이 안된다.
 ## require "capistrano/rails/assets"
 
