@@ -9,21 +9,21 @@ default: &default
   adapter: postgresql
   host: localhost
   encoding: utf8
-  username: <%= ENV["DB_USER_NAME"] %>
-  password: <%= ENV["DB_USER_PASSWD"] %>
+  username: ubuntu
+  password: 0000
   pool: 5
 
 development:
   <<: *default
-  database: <%= ENV["DB_NAME"] %>_<%= Rails.env %>
+  database: deploy_test_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: <%= ENV["DB_NAME"] %>_<%= Rails.env %>
+  database: deploy_test_test
 
 production:
   <<: *default
-  database: <%= ENV["DB_NAME"] %>_<%= Rails.env %>
+  database: deploy_test_production
