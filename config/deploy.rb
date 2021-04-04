@@ -17,7 +17,6 @@ set :branch, :master
 ## 배포 환경변수 설정
 set :use_sudo, false
 set :deploy_via, :remote_cache
-
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
