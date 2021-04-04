@@ -18,7 +18,7 @@ gem 'puma', '~> 4.1'
 gem 'figaro'
 
 ## capistrano
-gem 'capistrano'
+gem 'capistrano', '~> 3.14.1'
 gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'capistrano-rails'
